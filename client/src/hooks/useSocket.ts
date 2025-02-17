@@ -17,5 +17,7 @@ export const useSocket = () => {
     };
   }, []);
 
-  return { isConnected };
+  const handleConnect = () => socket.connect();
+
+  return { isConnected, handleConnect };
 };

@@ -2,12 +2,12 @@ import { ConnectionManager } from "./components";
 import { useSocket } from "./hooks/useSocket";
 
 function App() {
-  const { isConnected } = useSocket();
+  const { isConnected, handleConnect } = useSocket();
 
   console.log(isConnected);
   return (
     <>
-      <ConnectionManager />
+      <ConnectionManager onConnect={handleConnect} />
       <h1>Init</h1>
     </>
   );
